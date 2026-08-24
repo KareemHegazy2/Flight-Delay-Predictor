@@ -1,15 +1,37 @@
-# Flight-Delay-Predictor
-# ✈️ SkyPredict AI: Multi-Task Flight Delay Prediction & Risk Diagnostics
+# ✈️ SkyPredict AI: Enterprise Multi-Task Flight Delay Prediction
 
-SkyPredict AI is an end-to-end machine learning pipeline and interactive web application designed to assess flight delay risks before departure.
+SkyPredict AI is an end-to-end machine learning system and interactive analytics dashboard designed to assess flight delay risks before departure. The pipeline combines three specialized models to deliver delay probability, duration estimates, and root cause diagnostics.
 
-### 🌟 Key Capabilities
-* **Task A (Classification):** Binary classification to predict flight delay probability using an optimized custom threshold (0.22) to handle class imbalance.
-* **Task B (Regression):** Predicts the exact delay duration in minutes for flagged flights.
-* **Task C (Multi-Class):** Diagnoses the primary root cause (Carrier, Weather, NAS, Late Aircraft, Security) using balanced sample weights.
-* **Interactive UI:** A production-ready Streamlit dashboard for real-time inference and risk analytics.
+---
 
-### 🛠️ Tech Stack
-* **Machine Learning:** XGBoost (Classifier & Regressor), Scikit-Learn
-* **Data Processing:** Pandas, NumPy, Joblib
-* **Deployment & UI:** Streamlit
+## 📊 Dataset Access
+Due to GitHub file size limits (500MB+), the full historical aviation dataset is hosted on Kaggle:
+👉 **[Download Flight Delay and Cancellation Dataset from Kaggle](https://www.kaggle.com/datasets/patrickzel/flight-delay-and-cancellation-dataset-2019-2023)**
+
+*Place the downloaded CSV inside a `../data/` directory to run the training pipeline locally.*
+
+---
+
+## 🌟 Multi-Task Architecture
+* **Task A: Delay Classification (Binary)**
+  * Predicts whether a flight will be delayed (>15 minutes threshold).
+  * Uses a calibrated **custom threshold ($0.22$)** to optimize sensitivity and address class imbalance.
+* **Task B: Delay Duration Estimation (Regression)**
+  * Estimates delay length in minutes exclusively for flights flagged as delayed.
+* **Task C: Root Cause Diagnostics (Multi-Class)**
+  * Identifies the primary delay driver (*Carrier, Weather, NAS, Late Aircraft, Security*) using balanced sample weighting.
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+* **Core ML & Processing:** `Python`, `XGBoost`, `Scikit-Learn`, `Pandas`, `NumPy`, `Joblib`
+* **Inference App & Dashboard:** `Streamlit`
+
+---
+
+## 🚀 How to Run Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/SkyPredict-AI.git](https://github.com/your-username/SkyPredict-AI.git)
+   cd SkyPredict-AI
