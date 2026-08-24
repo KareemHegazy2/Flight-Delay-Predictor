@@ -1,14 +1,12 @@
-# ✈️ SkyPredict AI: Enterprise Multi-Task Flight Delay Prediction
+# ✈️ Flight Delay Predictor: Multi-Task Aviation Risk Analytics
 
-SkyPredict AI is an end-to-end machine learning system and interactive analytics dashboard designed to assess flight delay risks before departure. The pipeline combines three specialized models to deliver delay probability, duration estimates, and root cause diagnostics.
+Flight-Delay-Predictor is an end-to-end machine learning system and interactive analytics dashboard designed to assess flight delay risks before departure. The pipeline combines three specialized XGBoost models to deliver delay probability, duration estimates, and root cause diagnostics.
 
 ---
 
 ## 📊 Dataset Access
-Due to GitHub file size limits (500MB+), the full historical aviation dataset is hosted on Kaggle:
-👉 **[Download Flight Delay and Cancellation Dataset from Kaggle](https://www.kaggle.com/datasets/patrickzel/flight-delay-and-cancellation-dataset-2019-2023)**
-
-*Place the downloaded CSV inside a `../data/` directory to run the training pipeline locally.*
+Due to GitHub file size limits (500MB+), the full dataset is hosted on Kaggle:
+👉 **[Download Dataset from Kaggle](https://www.kaggle.com/datasets/patrickzel/flight-delay-and-cancellation-dataset-2019-2023)**
 
 ---
 
@@ -33,5 +31,5 @@ Due to GitHub file size limits (500MB+), the full historical aviation dataset is
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/SkyPredict-AI.git](https://github.com/your-username/SkyPredict-AI.git)
-   cd SkyPredict-AI
+   git clone [https://github.com/KareemHegazy2/Flight-Delay-Predictor.git](https://github.com/KareemHegazy2/Flight-Delay-Predictor.git)
+   cd Flight-Delay-Predictor
